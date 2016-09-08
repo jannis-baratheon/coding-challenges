@@ -27,7 +27,7 @@ public class AllSubarraysOfAnArray_bits implements AllSubarraysOfAnArray {
         return IntStream
                 .range(0, baseCollection.size())
                 .filter(i -> (mask & (powOf2(i))) != 0)
-                .map(i -> baseCollection.get(i))
+                .map(baseCollection::get)
                 .boxed()
                 .collect(toList());
     }

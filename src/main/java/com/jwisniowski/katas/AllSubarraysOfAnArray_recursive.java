@@ -20,7 +20,7 @@ public class AllSubarraysOfAnArray_recursive implements AllSubarraysOfAnArray {
 
     private List<List<Integer>> getSublists(List<Integer> input) {
         if (input.size() == 0) {
-            return Arrays.asList(Collections.emptyList());
+            return Collections.singletonList(Collections.emptyList());
         }
 
         List<Integer> tail = input.stream().skip(1).collect(toList());
@@ -28,7 +28,7 @@ public class AllSubarraysOfAnArray_recursive implements AllSubarraysOfAnArray {
 
         Stream<List<Integer>> sublists = sublistsOfTail
                 .stream()
-                .map(s -> union(s, Arrays.asList(input.get(0))));
+                .map(s -> union(s, Collections.singletonList(input.get(0))));
 
         return Stream
                 .concat(sublistsOfTail.stream(), sublists)

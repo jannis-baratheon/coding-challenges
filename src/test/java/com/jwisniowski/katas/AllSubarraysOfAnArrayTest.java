@@ -4,9 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -14,6 +12,7 @@ import java.util.stream.IntStream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsIterableContainingInAnyOrder.containsInAnyOrder;
 
+@SuppressWarnings("unchecked")
 public abstract class AllSubarraysOfAnArrayTest {
 
     private final Supplier<AllSubarraysOfAnArray> sutProducer;

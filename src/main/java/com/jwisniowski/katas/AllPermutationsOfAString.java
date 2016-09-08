@@ -16,8 +16,7 @@ that given a String str returns an array of all of its permutations. The returne
 
 public class AllPermutationsOfAString {
     public String[] solve(final String str) {
-        String[] permutations = permutate(str);
-        return permutations;
+        return permutate(str);
     }
 
     private String[] permutate(String str) {

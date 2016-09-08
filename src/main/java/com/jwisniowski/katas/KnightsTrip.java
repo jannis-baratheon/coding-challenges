@@ -60,9 +60,8 @@ public class KnightsTrip {
         int baseVal = getBaseVal(x, y);
         int val = getValAt(baseVal);
         int adjustment = getAdjustmentAt(x, y, baseVal);
-        int numMoves = val + adjustment;
 
-        return numMoves;
+        return val + adjustment;
     }
 
     private int abs(int n) {

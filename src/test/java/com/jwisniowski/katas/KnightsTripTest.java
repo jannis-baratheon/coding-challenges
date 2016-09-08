@@ -193,7 +193,7 @@ public class KnightsTripTest {
                 rowValues.add(sut.solve(j, i));
             }
 
-            resultBuilder.append(rowValues.stream().map(val -> val.toString()).collect(joining(",")));
+            resultBuilder.append(rowValues.stream().map(Object::toString).collect(joining(",")));
             resultBuilder.append("|");
         }
 

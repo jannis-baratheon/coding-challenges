@@ -23,8 +23,6 @@ public class AllSubarraysOfAnArray_bigInteger implements AllSubarraysOfAnArray {
             subarrays.add(subarray);
         }
 
-        int[][] result = subarrays.stream().map(s -> s.stream().mapToInt(Integer::intValue).toArray()).toArray(int[][]::new);
-
-        return result;
+        return subarrays.stream().map(s -> s.stream().mapToInt(Integer::intValue).toArray()).toArray(int[][]::new);
     }
 }
