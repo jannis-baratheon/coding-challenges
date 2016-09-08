@@ -41,7 +41,7 @@ public class KnightsTrip {
         }
     }
 
-    int solve(int x, int y) {
+    public int solve(int x, int y) {
         x = abs(x);
         y = abs(y);
 
